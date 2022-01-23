@@ -1,4 +1,4 @@
-import { Landing } from '@/features/landing';
+import { Landing } from '@/features/misc';
 import { AppProvider } from '@/providers/app';
 
 const App = () => {
