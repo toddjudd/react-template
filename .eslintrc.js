@@ -18,7 +18,7 @@ module.exports = {
       files: ['**/*.ts', '**/*.tsx'],
       extends: [
         'eslint:recommended',
-        'airbnb',
+        // 'airbnb',
         'plugin:import/errors',
         'plugin:import/warnings',
         'plugin:import/typescript',
@@ -35,6 +35,10 @@ module.exports = {
       },
       rules: {
         'react/jsx-filename-extension': ['warn', { extensions: ['.tsx'] }],
+        'react/function-component-definition': [
+          2,
+          { namedComponents: 'arrow-function' },
+        ],
         'linebreak-style': ['error', 'unix'],
         'import/order': [
           'error',
