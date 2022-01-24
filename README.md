@@ -1,11 +1,34 @@
-# Getting Started with Create React App
+# React Template
 
-This project was bootstrapped with
-[Create React App](https://github.com/facebook/create-react-app).
+This repo is a template for a basic react application.
+
+This trys to follow as many pratices as possible from
+[bulletproof-react](https://github.com/alan2207/bulletproof-react).
+
+This repo makes use of the following packages to help get started building
+quicker:
+
+- Typescript for easier to read and debug code.
+- eslint and prettier code formating and validation
+- craco for some custom webpack configuration
+- Tailwindcss for quick css development
+- react-bootstrap as a simple UI component library.
+
+## Things I'd lie to include
+
+- Jest for testing
+- Storybook for component iteration and documentation
+- Some form of commit linting for clean standard commit messages
+- Some form of spell check linting
 
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm run prepare`
+
+Runs the instalation of any package or dev dependancies not covered by
+`npm install` such as Husky.
 
 ### `npm start`
 
@@ -63,6 +86,10 @@ You don’t have to ever use `eject`. The curated feature set is suitable for
 small and middle deployments, and you shouldn’t feel obligated to use this
 feature. However we understand that this tool wouldn’t be useful if you couldn’t
 customize it when you are ready for it.
+
+### `npm run lint`
+
+Runs eslint to lint and fix Javascript or Typescript files.
 
 ## Learn More
 
