@@ -13,11 +13,11 @@ quicker:
 - craco for some custom webpack configuration
 - Tailwindcss for quick css development
 - react-bootstrap as a simple UI component library.
+- Storybook for component iteration and documentation
 
 ## Things I'd lie to include
 
 - Jest for testing
-- Storybook for component iteration and documentation
 - Some form of commit linting for clean standard commit messages
 - Some form of spell check linting
 
@@ -90,6 +90,10 @@ customize it when you are ready for it.
 ### `npm run lint`
 
 Runs eslint to lint and fix Javascript or Typescript files.
+
+### `npm run storybook`
+
+Runs storybook local server.
 
 ## Learn More
 

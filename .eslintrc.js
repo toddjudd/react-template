@@ -12,13 +12,12 @@ module.exports = {
     sourceType: 'module',
   },
   ignorePatterns: ['node_modules/*'],
-  extends: ['eslint:recommended'],
+  extends: ['eslint:recommended', 'plugin:storybook/recommended'],
   overrides: [
     {
       files: ['**/*.ts', '**/*.tsx'],
       extends: [
-        'eslint:recommended',
-        // 'airbnb',
+        'eslint:recommended', // 'airbnb',
         'plugin:import/errors',
         'plugin:import/warnings',
         'plugin:import/typescript',
@@ -34,11 +33,19 @@ module.exports = {
         },
       },
       rules: {
-        'react/jsx-filename-extension': ['warn', { extensions: ['.tsx'] }],
+        'react/jsx-filename-extension': [
+          'warn',
+          {
+            extensions: ['.tsx'],
+          },
+        ],
         'react/function-component-definition': [
           2,
-          { namedComponents: 'arrow-function' },
+          {
+            namedComponents: 'arrow-function',
+          },
         ],
+        'react/prop-types': 'off',
         'linebreak-style': ['error', 'unix'],
         'import/order': [
           'error',
@@ -53,7 +60,10 @@ module.exports = {
               'object',
             ],
             'newlines-between': 'always',
-            alphabetize: { order: 'asc', caseInsensitive: true },
+            alphabetize: {
+              order: 'asc',
+              caseInsensitive: true,
+            },
           },
         ],
         'import/default': 'off',
@@ -62,11 +72,37 @@ module.exports = {
         'import/extensions': [
           'error',
           'ignorePackages',
-          { tsx: 'never', ts: 'never' },
+          {
+            tsx: 'never',
+            ts: 'never',
+          },
         ],
         'jsx-quotes': ['error', 'prefer-single'],
         'react/react-in-jsx-scope': 'off',
-        'prettier/prettier': ['error', {}, { usePrettierrc: true }],
+        'prettier/prettier': [
+          'error',
+          {},
+          {
+            usePrettierrc: true,
+          },
+        ],
+      },
+    },
+    {
+      files: ['*.stories.@(ts|tsx|js|jsx)'],
+      extends: [
+        'eslint:recommended', // 'airbnb',
+        'plugin:import/errors',
+        'plugin:import/warnings',
+        'plugin:import/typescript',
+        'plugin:react/recommended',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:react-hooks/recommended',
+        'plugin:prettier/recommended',
+        'plugin:storybook/recommended',
+      ],
+      rules: {
+        'react/react-in-jsx-scope': 'off',
       },
     },
   ],
