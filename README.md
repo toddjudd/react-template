@@ -1,3 +1,6 @@
+# Archived
+> This repo has been depricated in favor of [toddjudd/cra-template-toddjudd](https://github.com/toddjudd/cra-template-toddjudd)
+
 # React Template
 
 This repo is a template for a basic react application.
